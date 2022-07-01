@@ -1,2 +1,1 @@
-# cpp-Programs
-Programs written in C++.
+cpp-Program. MIT Licence. 2022.
