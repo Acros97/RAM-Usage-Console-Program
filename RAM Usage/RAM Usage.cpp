@@ -6,6 +6,31 @@
 #include "windows.h"
 using namespace std;
 
+string StatusScreen(int percentage) {
+	string LSTATUS = "[                  ]";
+
+	if (percentage >= 10)
+		LSTATUS = "[..                ]";
+	if (percentage >= 20)
+		LSTATUS = "[....              ]";
+	if (percentage >= 40)
+		LSTATUS = "[.......           ]";
+	if (percentage >= 55)
+		LSTATUS = "[.........         ]";
+	if (percentage >= 60)
+		LSTATUS = "[..........        ]";
+	if (percentage >= 65)
+		LSTATUS = "[...........       ]";
+	if (percentage >= 75)
+		LSTATUS = "[.............     ]";
+	if (percentage >= 80)
+		LSTATUS = "[................  ]";
+	if (percentage >= 90)
+		LSTATUS = "[................. ]";
+
+	return LSTATUS;
+}
+
 int main()
 {
 	while (true) {
@@ -25,7 +50,7 @@ int main()
 		// PHYSICAL MEMORY CURRENTLY USED
 		DWORDLONG physMemMemUsed = memInfo.ullTotalPhys - memInfo.ullAvailPhys;
 		int percentage = (physMemMemUsed * 100) / totalPhysMem;
-		cout << "MEMORY CURRENTLY USED: " << physMemMemUsed << "(" << percentage << "%)" << "\n";
+		cout << "MEMORY CURRENTLY USED: " << physMemMemUsed << "(" << percentage << "%)" << " " << StatusScreen(percentage) << endl;
 
 		// YOU CAN ADJUST UPDATE TIME
 		Sleep(3000);
