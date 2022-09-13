@@ -1,0 +1,3 @@
+﻿  RAM Usage.cpp
+c:\users\usuario\desktop\otros codigo fuente\ram usage\ram usage\ram usage.cpp(27): warning C4244: 'initializing': conversion from 'DWORDLONG' to 'int', possible loss of data
+  RAM Usage.vcxproj -> C:\Users\usuario\Desktop\Otros codigo fuente\RAM Usage\Debug\RAM Usage.exe
